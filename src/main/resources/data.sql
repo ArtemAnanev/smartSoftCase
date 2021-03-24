@@ -1,0 +1,16 @@
+CREATE ROLE "converterUser" WITH
+    LOGIN
+    NOSUPERUSER
+    CREATEDB
+    NOCREATEROLE
+    INHERIT
+    REPLICATION
+    CONNECTION LIMIT -1
+    PASSWORD 'xxxxxx';
+
+
+CREATE DATABASE currency_converter
+    WITH
+    OWNER = "converterUser"
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
